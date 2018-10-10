@@ -1,6 +1,6 @@
 public class Spiller {
     private int point = 0;
-    private String navn = "";
+    private String navn;
 
 
     public Spiller(String navn) {
