@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 class TerningTest {
     private Terning terning;
 
-    // Der bliver eksplicit opskrevet
+    // Der bliver eksplicit opskrevet en pr. test foranstaltning
     @org.junit.jupiter.api.BeforeEach
     public void setUpClass() {
         terning = new Terning();

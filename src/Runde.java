@@ -7,10 +7,12 @@ public class Runde {
      * Bruges primært til at tjekke efter evt. vindere og midlertidig score
      */
     private int[] tur;
+    private Spiller spiller;
 
     //TODO: Lav GETTER og SETTER for nødvendige funktioner
-    public Runde(int[] tur) {
+    public Runde(int[] tur, Spiller spiller) {
         this.tur = tur;
+        this.spiller = spiller;
     }
 
     public int[] getTur() {

@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class Spil {
     private Spiller[] spillere;
     // I starten af et spil findes ingen vindere, dette angives eksplicit
-    private Spiller vinder = null;
-    private Spiller aktivSpiller = null;
+    private Spiller vinder;
+    private Spiller aktivSpiller;
 
     private ArrayList<Runde> runder;
 
@@ -24,15 +24,41 @@ public class Spil {
 
     }
 
-    public void NaesteRunde(){
-        int[] slag = raflebaeger.slaaTerninger();
+    public void naesteTur(){
+        int[] slag      = raflebaeger.slaaTerninger();
+        int[] tempRunde = {slag[0], slag[1], slag[2]};
+        int nuIndex   = java.util.Arrays.asList(spillere).indexOf(aktivSpiller);
+        int nyIndex    = nuIndex == 1?0:1;
 
         aktivSpiller.setPoint(aktivSpiller.getPoint() + slag[2]);
+        runder.add(new Runde(tempRunde, aktivSpiller));
+        checkRunde(nuIndex);
+        this.aktivSpiller = spillere[nyIndex];
+    }
 
-        int[] tempRunde = {slag[0], slag[1], slag[2]};
-        runder.add(new Runde(tempRunde));
+    public void checkRunde(int spillerIndex){
+        if (spillerIndex == 1){
+            Spiller muligVinder = spillerMedScore(40);
+            if(muligVinder != null){
+                this.vinder = muligVinder;
+            }
+        }
+    }
 
-        aktivSpiller =
+    public Spiller spillerMedScore(int score){
+        int fundet = 0;
+        int res    = 0;
+
+        for(int i = 0; i < spillere.length; i++) {
+            if (spillere[i].getPoint() >= score) {
+                fundet += 1;
+                res     = i;
+            }
+        }
+        if (fundet == 1)
+            return spillere[res];
+        else
+            return null;
     }
 
     // GETTERS
@@ -50,6 +76,10 @@ public class Spil {
 
     public Spiller[] getSpillere() {
         return spillere;
+    }
+
+    public Spiller getAktivSpiller() {
+        return aktivSpiller;
     }
 
     // SETTERS/"ADDERS" (til at tilføje enkelte værdier)
