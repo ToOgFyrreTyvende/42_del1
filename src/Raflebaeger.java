@@ -14,7 +14,7 @@ public class Raflebaeger {
     }
 
     public int[] slaaTerninger(){
-        sum = terning[0].nyTerningSlag() + terning[0].nyTerningSlag();
+        sum = terning[0].nyTerningSlag() + terning[1].nyTerningSlag();
 
         int[] returnArr = {terning[0].getResultat(), terning[1].getResultat(), sum};
 

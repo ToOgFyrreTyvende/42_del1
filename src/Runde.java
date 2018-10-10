@@ -2,24 +2,28 @@ import java.util.ArrayList;
 
 public class Runde {
     /**
-     * @author Micky
+     * @author AndersM
      * Denne klasse bruges til at holde øje med hvilke værdier der bliver sat ind i hver tur
      * Bruges primært til at tjekke efter evt. vindere og midlertidig score
      */
-    private int[] tur;
+    private ArrayList<int[]> ture;
     private Spiller spiller;
 
     //TODO: Lav GETTER og SETTER for nødvendige funktioner
-    public Runde(int[] tur, Spiller spiller) {
-        this.tur = tur;
-        this.spiller = spiller;
+    public Runde() {
+        ture = new ArrayList<>();
     }
 
-    public int[] getTur() {
-        return tur;
+    public int[] getTur(int index) {
+        return ture.get(index);
     }
 
-    public void setTur(int[] tur) {
-        this.tur = tur;
+    public ArrayList<int[]> getTure() {
+        return ture;
     }
+
+    public void addTur(int[] tur) {
+        ture.add(tur);
+    }
+
 }

@@ -65,13 +65,25 @@ class SpilTest {
     }
 
     @Test
+    void tilfoejTur() {
+        int[] rundeVaerdier = {3, 2, 5,0};
+        spil.tilfoejRunde(new Runde());
+        spil.tilfoejTur(rundeVaerdier);
+        spil.tilfoejTur(rundeVaerdier);
+
+        assertEquals(rundeVaerdier, spil.getNuRunde().getTur(0));
+
+        assertEquals(rundeVaerdier, spil.getNuRunde().getTur(1));
+    }
+
+    @Test
     void tilfoejRunde() {
-        int[] rundeVaerdier = {3,2};
-        spil.tilfoejRunde(new Runde(rundeVaerdier, spil.getSpillere()[0]));
-        spil.tilfoejRunde(new Runde(rundeVaerdier, spil.getSpillere()[0]));
+        int[] rundeVaerdier = {3, 2, 5,0};
+        spil.tilfoejRunde(new Runde());
+        spil.tilfoejRunde(new Runde());
 
-        assertEquals(rundeVaerdier, spil.getRunde(0).getTur());
+        assertEquals(rundeVaerdier, spil.getRunde(0).getTur(0));
 
-        assertEquals(rundeVaerdier, spil.getRunder().get(1).getTur());
+        assertEquals(rundeVaerdier, spil.getRunder().get(1).getTur(1));
     }
 }

@@ -11,6 +11,10 @@ public class Spiller {
         return point;
     }
 
+    public String getNavn(){
+        return this.navn;
+    }
+
     public void setPoint(int point) {
         this.point = point;
     }
