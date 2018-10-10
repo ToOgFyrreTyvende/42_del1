@@ -11,6 +11,7 @@ class TerningTest {
     }
 
     /**
+     * @author Hackerman ( ͡° ͜ʖ ͡°)
      * Tester ternings default resultat værdi ved getter.
      * @result Default sat værdi fra klassen, altså <code>0</code>
      */
