@@ -10,7 +10,10 @@ public class Terning {
         return resultat;
     }
 
-    public void setResultat() {
-        this.resultat = 0;
+    public byte nyTerningSlag() {
+        int resultat  = (int) (Math.random()*6) + 1;
+        this.resultat = (byte) resultat;
+
+        return this.resultat;
     }
 }
