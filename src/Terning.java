@@ -1,11 +1,14 @@
 public class Terning {
+    /**
+     * 
+     */
     private byte resultat = 0;
 
     public Terning() {
 
     }
 
-    //TODO: implementer tilfældighed
+    //TODO: Tag højde for, at resultatet starter med at være 0?
     public byte getResultat() {
         return resultat;
     }
