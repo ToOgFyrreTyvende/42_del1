@@ -18,6 +18,8 @@ class SpilTest {
         assertEquals(spil.getAktivSpiller(), spil.getSpillere()[1]);
         spil.naesteTur();
         assertEquals(spil.getAktivSpiller(), spil.getSpillere()[0]);
+
+        assertEquals(2, spil.getRunder().size());
     }
 
     @Test
