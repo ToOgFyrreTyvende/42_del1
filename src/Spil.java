@@ -126,6 +126,7 @@ public class Spil {
         return afsluttet;
     }
 
+
     // SETTERS/"ADDERS" (til at tilføje enkelte værdier)
     public void setVinder(Spiller vinder) {
         this.vinder = vinder;

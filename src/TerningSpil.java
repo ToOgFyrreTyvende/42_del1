@@ -22,14 +22,9 @@ public class TerningSpil {
         do {
             if(scanner.hasNextLine()){
 
-                if (spil.getVinder() == null) {
-                    System.out.println(spil.naesteTur());
-                }else {
-                    spil.slut();
-                    System.out.println(
-                            "Velkommen til IOOuteractive Terning spillet!\n" +
-                                    "Tryk Enter for at påbegynde et spil med 2 spillere ↵");
-                }
+                System.out.println(spil.naesteTur());
+                checkVinderOgSlut(spil);
+
                 scanner.nextLine();
 
             }else{
@@ -39,5 +34,16 @@ public class TerningSpil {
                 System.out.print("\rIndtast venligst et korrekt tal: ");
             }
         }while (spilAktivt);
+    }
+
+    public static void checkVinderOgSlut(Spil spil){
+        if (spil.getVinder() != null){
+            spil.slut();
+            String slutTekst = String.format(
+                    "%s HAR VUNDET SPILLET MED %d POINT PÅ SIN %d. TUR!!!",
+                    spil.getVinder().getNavn(), spil.getVinder().getPoint(), spil.getRunder().size()
+                    );
+            System.out.println(slutTekst);
+        }
     }
 }
