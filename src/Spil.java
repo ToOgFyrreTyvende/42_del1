@@ -31,6 +31,8 @@ public class Spil {
 
         int[] tempRunde = {slag[0], slag[1], slag[2]};
         runder.add(new Runde(tempRunde));
+
+        aktivSpiller =
     }
 
     // GETTERS
