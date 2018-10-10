@@ -1,10 +1,10 @@
 import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Test;
 
 class TerningTest {
     private Terning terning;
 
-    // Der bliver eksplicit opskrevet
+    // Der bliver eksplicit opskrevet en pr. test foranstaltning
     @org.junit.jupiter.api.BeforeEach
     public void setUpClass() {
         terning = new Terning();
@@ -15,7 +15,7 @@ class TerningTest {
      * Tester ternings default resultat værdi ved getter.
      * @result Default sat værdi fra klassen, altså <code>0</code>
      */
-    @org.junit.jupiter.api.Test
+    @Test
     void getResultat() {
         assertEquals(0, terning.getResultat());
     }
@@ -26,7 +26,7 @@ class TerningTest {
      *         herfra generers et tal mellem 1 og 6, og tjekkes efter med
      *         <code>getResultat()</code>
      */
-    @org.junit.jupiter.api.Test
+    @Test
     void nyTerningSlag() {
         int slag = terning.nyTerningSlag();
 

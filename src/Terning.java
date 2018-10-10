@@ -4,20 +4,20 @@ public class Terning {
      * Bruges primært til at udgive et resultat af terningslaget
      * @author 42
      */
-    private byte resultat = 0;
+    private int resultat = 0;
 
     public Terning() {
 
     }
 
     //TODO: Tag højde for, at resultatet starter med at være 0?
-    public byte getResultat() {
+    public int getResultat() {
         return resultat;
     }
 
-    public byte nyTerningSlag() {
+    public int nyTerningSlag() {
         int resultat  = (int) (Math.random()*6) + 1;
-        this.resultat = (byte) resultat;
+        this.resultat = resultat;
 
         return this.resultat;
     }
