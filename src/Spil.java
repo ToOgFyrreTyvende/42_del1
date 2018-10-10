@@ -13,39 +13,39 @@ public class Spil {
 
     public Spil() {
         spillere    = new Spiller[2];
-        spillere[0] = new Spiller();
-        spillere[1] = new Spiller();
+        spillere[0] = new Spiller("Spiller 1");
+        spillere[1] = new Spiller("Spiller 2");
 
         runder      = new ArrayList<>();
 
         raflebaeger = new Raflebaeger();
     }
 
+    // GETTERS
     public Spiller getVinder() {
         return vinder;
-    }
-
-    public void setVinder(Spiller vinder) {
-        this.vinder = vinder;
-    }
-
-    public ArrayList<Runde> getRunder() {
-        return runder;
     }
 
     public Runde getRunde(int index) {
         return runder.get(index);
     }
 
-    public void tilfoejRunde(Runde runde) {
-        this.runder.add(runde);
+    public ArrayList<Runde> getRunder() {
+        return runder;
     }
 
     public Spiller[] getSpillere() {
         return spillere;
     }
 
-    public void setRunder(ArrayList<Runde> runder) {
-        this.runder = runder;
+    // SETTERS/"ADDERS" (til at tilføje enkelte værdier)
+    public void setVinder(Spiller vinder) {
+        this.vinder = vinder;
     }
+
+    public void tilfoejRunde(Runde runde) {
+        this.runder.add(runde);
+    }
+
+
 }
