@@ -51,10 +51,10 @@ class SpilTest {
 
     @Test
     void getVinder() {
-    }
+        spil.getSpillere()[0].setPoint(40);
 
-    @Test
-    void spillerMedScore1() {
+        spil.checkRunde(1);
+        assertEquals( spil.getSpillere()[0], spil.getVinder());
     }
 
     @Test
@@ -64,5 +64,12 @@ class SpilTest {
 
     @Test
     void tilfoejRunde() {
+        int[] rundeVaerdier = {3,2};
+        spil.tilfoejRunde(new Runde(rundeVaerdier, spil.getSpillere()[0]));
+        spil.tilfoejRunde(new Runde(rundeVaerdier, spil.getSpillere()[0]));
+
+        assertEquals(rundeVaerdier, spil.getRunde(0).getTur());
+
+        assertEquals(rundeVaerdier, spil.getRunder().get(1).getTur());
     }
 }
