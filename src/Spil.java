@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Spil {
     private Spiller[] spillere;
-
     // I starten af et spil findes ingen vindere, dette angives eksplicit
     private Spiller vinder = null;
+    private Spiller aktivSpiller = null;
 
     private ArrayList<Runde> runder;
 
@@ -19,6 +19,18 @@ public class Spil {
         runder      = new ArrayList<>();
 
         raflebaeger = new Raflebaeger();
+
+        aktivSpiller = spillere[0];
+
+    }
+
+    public void NaesteRunde(){
+        int[] slag = raflebaeger.slaaTerninger();
+
+        aktivSpiller.setPoint(aktivSpiller.getPoint() + slag[2]);
+
+        int[] tempRunde = {slag[0], slag[1], slag[2]};
+        runder.add(new Runde(tempRunde));
     }
 
     // GETTERS
