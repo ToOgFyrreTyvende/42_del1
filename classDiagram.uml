@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="170.63621794871793" y="455.0">TerningSpil</node>
+    <node x="83.63621794871793" y="244.0">Spil</node>
+    <node x="100.93076923076922" y="0.0">Spiller</node>
+    <node x="273.4916666666667" y="11.0">Terning</node>
+    <node x="217.0" y="133.0">Raflebaeger</node>
+    <node x="382.0" y="144.0">TerningTest</node>
+    <node x="59.63621794871793" y="455.0">SpilTest</node>
+    <node x="0.0" y="133.0">Runde</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="TerningSpil" target="Spil">
+      <point x="27.5" y="-14.5" />
+      <point x="253.13621794871793" y="430.0" />
+      <point x="250.76121794871793" y="430.0" />
+      <point x="71.625" y="80.5" />
+    </edge>
+    <edge source="Runde" target="Spiller">
+      <point x="0.0" y="-25.5" />
+      <point x="81.5" y="113.0" />
+      <point x="112.43076923076922" y="113.0" />
+      <point x="-46.0" y="36.5" />
+    </edge>
+    <edge source="TerningTest" target="Terning">
+      <point x="-28.24999999999997" y="-14.5" />
+      <point x="410.25000000000006" y="113.0" />
+      <point x="351.1916666666667" y="113.0" />
+      <point x="22.200000000000017" y="25.5" />
+    </edge>
+    <edge source="Raflebaeger" target="Terning">
+      <point x="48.33333333333334" y="-25.5" />
+      <point x="337.83333333333337" y="113.0" />
+      <point x="328.9916666666667" y="113.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="SpilTest" target="Spil">
+      <point x="0.0" y="-14.5" />
+      <point x="105.13621794871793" y="430.0" />
+      <point x="107.51121794871793" y="430.0" />
+      <point x="-71.625" y="80.5" />
+    </edge>
+    <edge source="Spil" target="Raflebaeger">
+      <point x="85.94999999999999" y="-80.5" />
+      <point x="265.08621794871794" y="224.0" />
+      <point x="325.75" y="224.0" />
+      <point x="36.25" y="25.5" />
+    </edge>
+    <edge source="Spil" target="Runde">
+      <point x="-66.84999999999997" y="-80.5" />
+      <point x="112.28621794871796" y="214.0" />
+      <point x="81.5" y="214.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Spil" target="Spiller">
+      <point x="-9.549999999999955" y="-80.5" />
+      <point x="169.58621794871797" y="224.0" />
+      <point x="173.5" y="224.0" />
+      <point x="173.5" y="113.0" />
+      <point x="135.43076923076922" y="113.0" />
+      <point x="-23.0" y="36.5" />
+    </edge>
+    <edge source="SpilTest" target="Runde">
+      <point x="-30.333333333333314" y="-14.5" />
+      <point x="74.80288461538461" y="430.0" />
+      <point x="33.54999999999998" y="430.0" />
+      <point x="33.54999999999998" y="224.0" />
+      <point x="16.30000000000001" y="224.0" />
+      <point x="-65.19999999999999" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="247.5" y="242.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
