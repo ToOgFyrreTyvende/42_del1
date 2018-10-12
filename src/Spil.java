@@ -75,8 +75,20 @@ public class Spil {
                 res     = i;
             }
         }
-        if (fundet == 1)
+        if (fundet == 1) {
             return spillere[res];
+        }
+        else if (fundet == 2) {
+            if (spillere[0].getPoint() > spillere[1].getPoint()) {
+                return (spillere[0]);
+            }
+            else if (spillere[0].getPoint() < spillere[1].getPoint()){
+                return (spillere[1]);
+            }
+            else{
+                return () //todo: Find ud af hvad der skal returnes !
+            }
+        }
         else
             return null;
     }
