@@ -86,7 +86,7 @@ public class Spil {
                 return (spillere[1]);
             }
             else{
-                return () //todo: Find ud af hvad der skal returnes !
+                return null;
             }
         }
         else
