@@ -1,8 +1,8 @@
 public class Terning {
     /**
+     * @author 42
      * Denne klasse bruges til at simulere en "terning"
      * Bruges primært til at udgive et resultat af terningslaget
-     * @author 42
      */
     private int resultat = 0;
 

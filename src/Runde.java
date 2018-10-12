@@ -2,7 +2,9 @@ import java.util.ArrayList;
 
 public class Runde {
     /**
-     * @author AndersM
+     * @author xephyz
+     * aka. Anders "Micky" Michaelsen
+     *
      * Denne klasse bruges til at holde øje med hvilke værdier der bliver sat ind i hver tur
      * Bruges primært til at tjekke efter evt. vindere og midlertidig score
      */
