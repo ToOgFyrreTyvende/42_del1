@@ -69,17 +69,6 @@ class SpilTest {
     }
 
     @Test
-    void tilfoejRunde() {
-        int[] rundeVaerdier = {3, 2, 5,0};
-        spil.tilfoejRunde(new Runde());
-        spil.tilfoejRunde(new Runde());
-
-        assertEquals(rundeVaerdier, spil.getRunde(0).getTur(0));
-
-        assertEquals(rundeVaerdier, spil.getRunder().get(1).getTur(1));
-    }
-
-    @Test
     void vinderOverFyrre() {
         spil.getSpillere()[0].setPoint(41);
         spil.getSpillere()[1].setPoint(42);
