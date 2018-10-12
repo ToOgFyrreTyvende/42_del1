@@ -38,21 +38,13 @@ class SpilTest {
     }
 
     @Test
-    void checkRunde() {
+    void checkRundeGetVinder() {
         spil.getSpillere()[0].setPoint(10);
         spil.getSpillere()[1].setPoint(20);
 
         spil.checkRunde(1);
         assertEquals(null, spil.getVinder());
 
-        spil.getSpillere()[0].setPoint(40);
-
-        spil.checkRunde(1);
-        assertEquals( spil.getSpillere()[0], spil.getVinder());
-    }
-
-    @Test
-    void getVinder() {
         spil.getSpillere()[0].setPoint(40);
 
         spil.checkRunde(1);
